@@ -2,6 +2,10 @@ class Drop{
     constructor(x,y){
         this.x=x+5;
         this.y=0;
+        this.body=circle;
+        this.r=10;
+        this.r=r;
+        body;
     }
 
     //this.color=color("blue");

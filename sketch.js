@@ -8,7 +8,7 @@ var ground;
 var bruce, bruceImg;
 
 function preload(){
-    
+    bruceImg = loadimage("Walking Frame");
 }
 
 function setup(){
