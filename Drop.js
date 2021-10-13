@@ -1,23 +1,27 @@
 class Drop{
     constructor(x,y){
-        this.x=x+5;
-        this.y=0;
-        this.body=circle;
-        this.r=10;
-        this.r=r;
-        body;
+        var options = {
+            density : 2,
+            friction : 0.5,
+            restitution : 0.3
+        }
+        this.body=Bodies.circle(x,y,5,options);
+        World.add(world,this.body);
+        this.r=5;
     }
 
     //this.color=color("blue");
 
 display() {
     var pos = this.body.position;
-        rectMode(CENTER);
         fill("blue");
-        rect(pos.x, pos.y, this.w, this.h);
-
         ellipseMode(RADIUS);
-        ellipse(0,0,this.r,this.r);
+        ellipse(pos.x,pos.y,this.r,this.r);
 }
 
+update() {
+    if(this.body.position.y>height) {
+        Matter.Body.setPosition(this.body,{x : random(0,800), y : random(25,75)})
+    }
+}
 }

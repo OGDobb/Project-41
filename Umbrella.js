@@ -5,12 +5,15 @@ class Umbrella{
         }
         this.x=x;
         this.y=y;
+        this.body=Bodies.circle(x,y,100,options);
+        this.r=100;
+        World.add(world,this.body);
     }
+
 display() {
     var pos = this.body.position;
-        rectMode(CENTER);
-        fill("pink");
-        rect(pos.x, pos.y, this.w, this.h);
+   // animation(bruceImg,pos.x,pos.y,this.r,this.r);
+    
 }
 
 }
